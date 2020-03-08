@@ -1,0 +1,26 @@
+{
+  "name": "qitabuh",
+  "version": "1.0.0",
+  "description": "Qitabuh Exercise",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "json-server": "^0.16.1",
+    "mocha": "^7.1.0",
+    "shortid": "^2.2.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:server": "json-server server/api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engineer-kndegwa/qitabuh.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/engineer-kndegwa/qitabuh/issues"
+  },
+  "homepage": "https://github.com/engineer-kndegwa/qitabuh#readme"
+}
