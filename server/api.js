@@ -2,6 +2,7 @@ const BookStore = require('./BookStore');
 
 const bookStore = new BookStore();
 
+// Please have as much fun as you want with these titles.
 const RANDOM_TITLES = [
     "Dog",
     "Cat",
@@ -16,7 +17,7 @@ module.exports = () => {
     };
 
     return {
-        data: {
+        api: {
             books: bookStore.getAllBooks()
         }
     }
