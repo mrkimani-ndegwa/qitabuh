@@ -4,11 +4,13 @@ const bookStore = new BookStore();
 
 // Please have as much fun as you want with these titles.
 const RANDOM_TITLES = [
-    "Dog",
-    "Cat",
-    "Book",
-    "Awesome",
-    "Noise"
+    "Chinua Achebe",
+    "Catalyzed Immortality",
+    "Harry Potter & the Seven heads or whatever",
+    "Habari ndiyo hiyo",
+    "Noisey Manouvres",
+    "Half A Day and Other Stories",
+    "Vioja Mahakamani"
 ];
 
 module.exports = () => {
@@ -21,4 +23,4 @@ module.exports = () => {
             books: bookStore.getAllBooks()
         }
     }
-}
+};

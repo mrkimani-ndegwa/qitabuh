@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render correctly when all props are passed. 1`] = `null`;
+
+exports[`Should render correctly when all props are passed. 2`] = `
+<ul
+  className="books-list-ctn"
+>
+  <li
+    className="book-ctn"
+    onClick={[Function]}
+  >
+    <label
+      className="checkbox-ctn"
+    >
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="checkbox-text"
+      >
+        Title
+      </span>
+    </label>
+  </li>
+</ul>
+`;

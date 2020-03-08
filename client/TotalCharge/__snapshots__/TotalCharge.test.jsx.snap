@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render correctly when all props are passed. 1`] = `null`;
+
+exports[`Should render correctly when all props are passed. 2`] = `
+<div
+  className="view-charge"
+>
+  Total book charge comes to
+  <span>
+    $0
+  </span>
+</div>
+`;

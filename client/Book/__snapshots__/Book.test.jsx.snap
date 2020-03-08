@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render correctly when there are no items 1`] = `
+<li
+  className="book-ctn selected"
+  onClick={[Function]}
+>
+  <label
+    className="checkbox-ctn"
+  >
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="checkbox-text"
+    >
+      Title
+    </span>
+  </label>
+  <input
+    className="duration-selection"
+    onChange={[Function]}
+    placeholder="Enter duration in days to rent --> Title"
+    type="number"
+  />
+</li>
+`;

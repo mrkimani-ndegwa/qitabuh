@@ -1,0 +1,30 @@
+.book-ctn {
+    padding: 1em;
+    margin: 2em 0;
+    cursor: pointer;
+    box-shadow: 2px 2px 30px rgba($secondary-color, 0.2);
+    transition: all .4s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        width: 40%;
+    }
+    
+    &.selected {
+        background: $primary-color-2;
+        color: $white;
+    }
+
+    .duration-selection{
+        border: none;
+        width: 50%;
+        padding: 10px;
+        font-size: 1em;
+
+        &:focus {
+            outline: 8px solid rgba($secondary-color-2, 0.3);
+        }
+    }
+};

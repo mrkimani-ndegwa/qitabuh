@@ -1,0 +1,20 @@
+.book-store-ctn{
+    width: 100%;
+}
+
+.store-title {
+    text-align: center;
+    font-size: 3em;
+    margin: 1em 0;
+    color: $primary-color-2;
+    
+    .sub-title {
+        font-size: small;
+        color: $secondary-color;
+    }
+    
+    span {
+        color: $primary-color;
+    }
+}
+

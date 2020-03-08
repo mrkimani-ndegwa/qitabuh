@@ -1,0 +1,73 @@
+.checkbox-ctn {
+    z-index: 0;
+    position: relative;
+    display: inline-block;
+    > span {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      cursor: pointer;
+      &::before {
+        content: "";
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 3px 11px 3px 1px;
+        border: 1px solid $secondary-color;
+        border-radius: 2px;
+        width: 1.4em;
+        height: 1.4em;
+        vertical-align: top;
+        transition: border-color 0.2s, background-color 0.2s;
+      } // Checkbox itself
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 5px;
+        width: 8px;
+        height: 3px;
+        border: solid 2px transparent;
+        border-right: transparent;
+        border-top: transparent;
+        transform: translate(3px, 4px) rotate(-45deg);
+      } // Checkmark
+    }
+    > input {
+      visibility: hidden;
+      z-index: -1;
+      position: absolute;
+      left: -10px;
+      top: -8px;
+      display: block;
+      margin: 0;
+      border-radius: 50%;
+      width: 1.5em;
+      height: 1.5em;
+      box-shadow: none;
+      outline: none;
+      opacity: 0;
+      transform: scale(1);
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.2s;
+      &:active {
+        opacity: 1;
+        transform: scale(0);
+        transition: transform 0s, opacity 0s;
+      }
+      &:checked {
+        background-color: $secondary-color;
+      }
+      &:checked {
+        + span {
+          &::before {
+            border-color: $secondary-color;
+            background: $secondary-color;
+          }
+          &::after {
+            border-color: #fff;
+          }
+        }
+      }
+    }
+}
