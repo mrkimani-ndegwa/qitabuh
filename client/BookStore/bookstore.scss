@@ -1,5 +1,11 @@
 .book-store-ctn{
     width: 100%;
+
+    .no-selected{
+        color: rgba($secondary-color, 0.6);
+        text-align: center;
+        margin: 2em 0;
+    }
 }
 
 .store-title {

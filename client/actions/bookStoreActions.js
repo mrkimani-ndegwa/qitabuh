@@ -74,7 +74,6 @@ export const fetchBooks =  () => {
             const response = await data.json();
             dispatch(getAllBooksResolved(response))
         } catch(error){
-            console.log("are we here?", typeof(error))
             dispatch(getAllBooksFailed(error)) 
         }
     }

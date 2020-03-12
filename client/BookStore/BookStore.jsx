@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
+import PropTypes from "prop-types";
 import { connect } from 'react-redux'
 
 // Components
 import BooksList from "../BooksList/BooksList.jsx"
 import TotalCharge from "../TotalCharge/TotalCharge.jsx"
 
-// Actions
+// Action creators
 import { fetchBooks, selectBook, selectDuration } from "../actions/bookStoreActions";
 
 const Loading = ({isLoading}) => {
@@ -19,7 +20,6 @@ class BookStore extends Component {
         // Fetch All Data.
         this.props.fetchBooks();
     };
-
     // Functions
     handleSelectBook = (event, id) => {
         event.preventDefault();
@@ -44,7 +44,7 @@ class BookStore extends Component {
         if(error !== null){
             return <div className="error">Ooops! An error occurred. Please try again later.</div>
         }
-        
+
         <Loading isLoading={isLoading}/>
 
         return <div className="book-store-ctn">
@@ -76,9 +76,20 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = { fetchBooks, selectBook, selectDuration };
 
-export default connect(
+const ConnectedBookStore =  connect(
     mapStateToProps,
     mapDispatchToProps
 )(BookStore);
+
+BookStore.propTypes = {
+    allBooks: PropTypes.array.isRequired,
+    selectedBooks: PropTypes.array.isRequired,
+    isLoading: PropTypes.bool.isRequired
+};
+
+export {
+    ConnectedBookStore,
+    Loading
+}
 
 

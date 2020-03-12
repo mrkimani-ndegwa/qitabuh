@@ -1,4 +1,4 @@
-// Redux is definitely overkill but needed to 
+// Redux is definitely overkill for this project but needed to 
 // refresh some of the basics with this app.
 import * as TYPES from "../actions/types";
 
@@ -25,7 +25,6 @@ const books = (state = INITIAL_STATE, action) => {
     }
 
     case TYPES.GET_ALL_BOOKS_FAILED:
-        console.log(action.payload, "Here thoug")
         return {
             ...state,
             pendingResolution: false,
