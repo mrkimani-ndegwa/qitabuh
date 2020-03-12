@@ -1,5 +1,7 @@
 # QITABUH
 
+[![Build Status](https://travis-ci.org/engineer-kndegwa/qitabuh.svg?branch=master)](https://travis-ci.org/engineer-kndegwa/qitabuh)
+
 Initial Notes
 
 Create a simple UI that shows a list of books.
