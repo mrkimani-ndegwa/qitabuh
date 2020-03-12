@@ -1,0 +1,53 @@
+{
+    "books": [
+      {
+        "id": "SXMmARGv",
+        "title": "Chinua Achebe",
+        "category": "regular",
+        "isSelected": false,
+        "durationInDays": 0
+      },
+      {
+        "id": "seigjGtcb",
+        "title": "Catalyzed Immortality",
+        "category": "fiction",
+        "isSelected": false,
+        "durationInDays": 0
+      },
+      {
+        "id": "FoXux-heI",
+        "title": "Harry Potter & the Seven heads or whatever",
+        "category": "fiction",
+        "isSelected": false,
+        "durationInDays": 0
+      },
+      {
+        "id": "apwfEK7ov",
+        "title": "Habari ndiyo hiyo",
+        "category": "fiction",
+        "isSelected": false,
+        "durationInDays": 0
+      },
+      {
+        "id": "bJLSqIkA7",
+        "title": "Noisey Manouvres",
+        "category": "fiction",
+        "isSelected": false,
+        "durationInDays": 0
+      },
+      {
+        "id": "VxMM91z6Q",
+        "title": "Half A Day and Other Stories",
+        "category": "novel",
+        "isSelected": false,
+        "durationInDays": 0
+      },
+      {
+        "id": "AtXTsJZIy",
+        "title": "Vioja Mahakamani",
+        "category": "novel",
+        "isSelected": false,
+        "durationInDays": 0
+      }
+    ]
+  }
