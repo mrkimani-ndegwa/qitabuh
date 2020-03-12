@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/engineer-kndegwa/qitabuh.svg?branch=master)](https://travis-ci.org/engineer-kndegwa/qitabuh)
 
+[![Coverage Status](https://coveralls.io/repos/github/engineer-kndegwa/qitabuh/badge.svg?branch=master)](https://coveralls.io/github/engineer-kndegwa/qitabuh?branch=master)
 Initial Notes
 
 Create a simple UI that shows a list of books.
