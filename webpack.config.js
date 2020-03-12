@@ -10,6 +10,7 @@ const plugins = [
 
 module.exports = {
     entry: './client/index.js',
+    devtool: "cheap-source-map",
     module: {
       rules: [
         {

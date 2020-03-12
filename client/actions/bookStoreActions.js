@@ -67,13 +67,16 @@ export const fetchBooks =  () => {
     return async (dispatch) => {
         dispatch(getAllBooks());
         try {
-            const data = await fetch(API_URL, {mode: 'no-cors'});
+            const data = await fetch(API_URL);
+            console.log(data, "da")
             if(!data.ok){
                 throw new Error(`API Call failed: ${JSON.stringify(data)}`)
             }
             const response = await data.json();
+            console.log(response, "respmse")
             dispatch(getAllBooksResolved(response))
         } catch(error){
+            console.log(error, "Here")
             dispatch(getAllBooksFailed(error)) 
         }
     }

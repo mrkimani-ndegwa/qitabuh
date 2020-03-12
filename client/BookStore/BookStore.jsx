@@ -68,7 +68,7 @@ class BookStore extends Component {
 const mapStateToProps = (state) => {
     return {
       allBooks: state.books.allBooks,
-      selectedBooks: state.books.allBooks.filter(book => book.isSelected && book.durationInDays > 0),
+      selectedBooks: state.books.allBooks && state.books.allBooks.filter(book => book.isSelected && book.durationInDays > 0),
       isLoading: state.books.pendingResolution,
       error: state.books.error
     }
