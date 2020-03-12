@@ -1,12 +1,37 @@
-const getUnitCharge = (category) => {
-    let UNIT_CHARGE = 1;
-    const regularOrFiction = ['regular', 'novel'];
-    if(regularOrFiction.includes(category)){
-        UNIT_CHARGE = 1.5
-    } else if(category === 'fiction'){
-        UNIT_CHARGE = 3;
+const getUnitCharge = (category, durationInDays) => {
+    let baseCharge;
+    let excessCharge;
+    let totalCharge;
+    if(category === 'regular'){
+        if(durationInDays > 2){
+        excessCharge = 1.5;
+        baseCharge = 2;
+        totalCharge = baseCharge + (excessCharge * durationInDays - 2);
+        } else {
+            totalCharge = 2;
+        }
+    }
+
+    if(category === 'novel'){
+        baseCharge = 4.5;
+        if(durationInDays > 3){
+            totalCharge = 3 * durationInDays;
+        } else if (durationInDays < 3){
+            totalCharge = minimumCharge;
+        };
     };
-    return UNIT_CHARGE;
+
+    if(category === "fiction"){
+        totalCharge = durationInDays * 3
+    };
+
+    console.log(totalCharge, "total chareg")
+
+    return {
+        value: totalCharge,
+        displayValue: `$${totalCharge}`
+    };
+
 };
 
 export const calculateTotalCharge = (selectedBooks) => {
@@ -15,11 +40,13 @@ export const calculateTotalCharge = (selectedBooks) => {
         displayValue: '$0'
     };
 
-    const charges = selectedBooks.map(book=> book.durationInDays * getUnitCharge(book.category));
+    const charges = selectedBooks.map(book=> book.durationInDays * getUnitCharge(book.category, book.durationInDays));
     const reducer = (acc, curr) => {
         return acc + curr
     };
+
     const totalCharge = charges.reduce(reducer, 0);
+    console.log(selectedBooks, "select")
     return {
         value: totalCharge,
         displayValue: `$${totalCharge}`
