@@ -3,13 +3,14 @@ const shortId = require('shortid');
 class BookStore {
     constructor() {
         this.allBooks = [];
+        this.categories = ["regular", "fiction", "novel"];
     };
 
-    addBook(title, category = null) {
+    addBook(title) {
         const book = {
             id: shortId(),
             title,
-            category,
+            category: this.categories[Math.floor(Math.random() * this.categories.length)],
             isSelected: false,
             durationInDays: 0
         };
