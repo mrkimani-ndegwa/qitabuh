@@ -37,3 +37,9 @@ TODO List
         - Duration
         - Return B * C * D
 
+
+# LOCAL SETUP
+1. Clone the project locally by running this command `git clone https://github.com/engineer-kndegwa/qitabuh.git`.
+2. Run `npm install` to get all the dependencies.
+3. Run the server for the books API using JSON-Server using the command `npm run start:server`. It should be live at `http://localhost/api`. See JSON-server docs for more configuration options. The project checks for the env variable on prod for the online typicode server.
+4. Run the client (dev client) by running `npm run start`.
