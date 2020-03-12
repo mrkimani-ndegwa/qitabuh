@@ -15,6 +15,9 @@ const Loading = ({isLoading}) => {
 };
 
 class BookStore extends Component {
+    constructor(props){
+        super(props);
+    }
     // Life cycle Methods
     componentDidMount(){
         // Fetch All Data.
@@ -44,7 +47,6 @@ class BookStore extends Component {
         if(error !== null){
             return <div className="error">Ooops! An error occurred. Please try again later.</div>
         }
-
         <Loading isLoading={isLoading}/>
 
         return <div className="book-store-ctn">
@@ -68,7 +70,7 @@ class BookStore extends Component {
 const mapStateToProps = (state) => {
     return {
       allBooks: state.books.allBooks,
-      selectedBooks: state.books.allBooks && state.books.allBooks.filter(book => book.isSelected && book.durationInDays > 0),
+      selectedBooks: state.books.allBooks.filter(book => book.isSelected && book.durationInDays > 0),
       isLoading: state.books.pendingResolution,
       error: state.books.error
     }
@@ -81,15 +83,21 @@ const ConnectedBookStore =  connect(
     mapDispatchToProps
 )(BookStore);
 
-BookStore.propTypes = {
-    allBooks: PropTypes.array.isRequired,
-    selectedBooks: PropTypes.array.isRequired,
-    isLoading: PropTypes.bool.isRequired
-};
+// ConnectedBookStore.propTypes = {
+//     allBooks: PropTypes.array.isRequired,
+//     selectedBooks: PropTypes.array.isRequired,
+//     isLoading: PropTypes.bool.isRequired
+// };
+
+// ConnectedBookStore.defaultProps = {
+//     allBooks: [],
+//     selectedBooks: [],
+//     isLoading: false
+// };
 
 export {
     ConnectedBookStore,
     Loading
-}
+};
 
 

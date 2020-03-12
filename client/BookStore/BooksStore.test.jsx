@@ -71,7 +71,6 @@ test("Should be able to fetch Books on load.", async () => {
   ];
 
   const store = mockStore({ allBooks: [] });
-  // console.log(store.getActions(), "Get")
   return store.dispatch(fetchBooks()).then(() => {
     // return of async actions
     expect(store.getActions()).toEqual(expectedActions);

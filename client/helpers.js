@@ -35,7 +35,7 @@ const getUnitCharge = (category, durationInDays) => {
 };
 
 export const calculateTotalCharge = selectedBooks => {
-  if (!selectedBooks.length)
+  if (selectedBooks && !selectedBooks.length)
     return {
       value: 0,
       displayValue: "$0"

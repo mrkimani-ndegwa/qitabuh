@@ -21,7 +21,8 @@ const books = (state = INITIAL_STATE, action) => {
         return {
         ...state,
         pendingResolution: false,
-        allBooks: action.payload.books
+        allBooks: action.payload
+        // action.payload.books in DEV please check this.
     }
 
     case TYPES.GET_ALL_BOOKS_FAILED:
