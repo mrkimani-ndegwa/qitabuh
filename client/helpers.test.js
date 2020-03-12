@@ -1,8 +1,19 @@
 import {calculateTotalCharge} from "./helpers";
 
-const dummyBooks = [
-    {id: '21', durationInDays: 2, isSelected: true, title: "Jason Kalinga"},
-    {id: 'abcd', durationInDays: 12, isSelected: true, title: "Kings and Queens"},
+const dummyBooks = [{
+    id: "Vmj7LieK",
+    title: "Chinua Achebe",
+    category: "fiction",
+    isSelected: true,
+    durationInDays: 3
+   },
+   {
+    id: "xHdAp9JTe",
+    title: "Catalyzed Immortality",
+    category: "novel",
+    isSelected: true,
+    durationInDays: 2
+   }
 ]
 
 describe("Helpers Unit Tests", ()=>{
@@ -20,8 +31,8 @@ describe("Helpers Unit Tests", ()=>{
     it("Calculates corectly", ()=>{
         const result = calculateTotalCharge(dummyBooks);
         const expected = {
-            value: 14,
-            displayValue: '$14'
+            value: 13.5,
+            displayValue: '$13.5'
         };
         expect(result).toMatchObject(expected);
     });

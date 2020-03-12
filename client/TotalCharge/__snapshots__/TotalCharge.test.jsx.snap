@@ -14,7 +14,7 @@ exports[`Should render correctly when all props are passed. 2`] = `
 >
   😃.Total book charge comes to
   <span>
-    $0
+    $NaN
   </span>
 </div>
 `;

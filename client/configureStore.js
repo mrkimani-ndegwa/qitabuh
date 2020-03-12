@@ -13,4 +13,4 @@ export default function configureStore(preloadedState) {
   const store = createStore(rootReducer, preloadedState, composedEnhancers);
 
   return store
-}
+};
