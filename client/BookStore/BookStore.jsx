@@ -9,10 +9,7 @@ import TotalCharge from "../TotalCharge/TotalCharge.jsx"
 // Action creators
 import { fetchBooks, selectBook, selectDuration } from "../actions/bookStoreActions";
 
-const Loading = ({isLoading}) => {
-    if(!isLoading) return null;
-    return <div>Loading Data...</div>;
-};
+const Loading = () =>  <div className="loading-ctn"><p> Loading Data... 📚</p></div>;
 
 class BookStore extends Component {
     constructor(props){
@@ -46,8 +43,11 @@ class BookStore extends Component {
         } = this.props;
         if(error !== null){
             return <div className="error">Ooops! An error occurred. Please try again later.</div>
+        };
+
+        if(isLoading){
+            return <Loading/>
         }
-        <Loading isLoading={isLoading}/>
 
         return <div className="book-store-ctn">
             <div className="store-title">
@@ -82,18 +82,6 @@ const ConnectedBookStore =  connect(
     mapStateToProps,
     mapDispatchToProps
 )(BookStore);
-
-// ConnectedBookStore.propTypes = {
-//     allBooks: PropTypes.array.isRequired,
-//     selectedBooks: PropTypes.array.isRequired,
-//     isLoading: PropTypes.bool.isRequired
-// };
-
-// ConnectedBookStore.defaultProps = {
-//     allBooks: [],
-//     selectedBooks: [],
-//     isLoading: false
-// };
 
 export {
     ConnectedBookStore,
